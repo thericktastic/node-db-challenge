@@ -5,7 +5,7 @@ const Tasks = require("./task-model.js");
 const router = express.Router();
 
 router.get("/", (req, res) => {
-  Tasks.all()
+  Tasks.allWProjects()
     .then(tasks => {
       res.status(200).json(tasks);
     })
